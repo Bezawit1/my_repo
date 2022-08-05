@@ -1,0 +1,62 @@
+*,*::before,*::after{
+box-sizing:border-box;
+font-family: sans-serif;
+font-weight:normal;
+
+}
+body{
+padding:0;
+margin: 0;
+background: linear-gradient(to right,#00AAFF,#00FF6C)
+}
+.calculator-grid{
+
+    display: grid;
+    justify-content: center;
+    align-content:center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px) ;/*4 columns 100px wide*/
+    grid-template-rows: minmax(120px,auto)repeat(5,100px);/*minimum size 120px maximum size auto*/ 
+    
+
+}
+.calculator-grid>button{
+    cursor:pointer;
+    font-size:2rem;
+    border:1px solid white;
+    outline:none;
+    background-color:rgba(255,255,255,0.75);
+}
+.calculator-grid>button:hover{
+    background-color:rgba(255,255,255,0.9);
+}
+.span-two{
+    grid-column: span 2;/*will take the space of 2*/
+}
+.output{
+    grid-column: 1/-1; /*this means starting from column one to -1 or last column*/
+    background:rgba(0,0,0,.9);
+    display:flex;
+    align-items:flex-end;
+    flex-direction:column;
+    justify-content: space-around;
+    padding:10px;
+    word-wrap:break-word; /*word wrap property allows long words to be able to be broken and wrap onto the next line and break word value allows unbreakable words to be broken */
+    word-break:break-all;/* word break property specifies how words should break when reaching the end of the line the value break all to prevent overflow word maybe broken at any character*/
+
+}
+.output .previous-operand{
+    color:rgba(255,255,255,0.75);
+    font-size:1.5rem;
+}
+.output .current-operand{
+    color:white;
+    font-size:2.5rem;
+}
+.output .hello{
+    color:purple;
+   
+}
+.output .welcome{
+    color:yellow;
+}
