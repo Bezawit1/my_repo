@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+.App:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
