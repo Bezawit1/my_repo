@@ -2,7 +2,7 @@ import React,{ useState , useEffect, Suspense} from 'react';
 import InputField from './Taskify/Components/InputField';
 import { Todo } from './Taskify/Components/model';
 import './App'
-import { SplashScreen } from './QuizApp';
+
 import TodoList from './Taskify/Components/TodoList';
 const App : React.FC= ()=> {
   const [ isFocused  , setIsFocused] = useState(false)
